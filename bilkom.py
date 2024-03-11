@@ -1,6 +1,6 @@
 """BILKOM train info"""
 
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 import argparse
 import logging
@@ -137,10 +137,8 @@ def main():
     args = Bilkom.parse_arguments()
     bilkom = Bilkom()
     bilkom.set_station_info(args.station_name)
-    print(args.date)
-    bilkom.get_station_table(args.date)
-
-    logger.info(bilkom.station_table)
+    table = bilkom.get_station_table(args.date)
+    logger.info(table)
 
 
 if __name__ == "__main__":
