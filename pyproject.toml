@@ -7,7 +7,9 @@ name = "bilkom"
 authors = [{name = "wnuczek", email = "mail@pawelwnuk.pl"}]
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
-dynamic = ["version", "description"]
+dynamic = ["version"]
+readme = "README.md"
+description = "BILKOM train info"
 
 [project.urls]
 Home = "https://github.com/wnuczek/bilkom"
