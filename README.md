@@ -6,7 +6,7 @@ Python package for checking train timetables from [Bilkom.pl](https://bilkom.pl)
 
 Check out source code in github repo: [bilkom-python](https://github.com/wnuczek/bilkom-python)
 
-You can also try it out in jupiter notebook: [bilkom.ipynb](https://github.com/wnuczek/bilkom-python/blob/main/bilkom.ipynb)
+You can also try it out in jupyter notebook: [bilkom.ipynb](https://github.com/wnuczek/bilkom-python/blob/main/bilkom.ipynb)
 
 ## How to use
 
