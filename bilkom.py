@@ -55,6 +55,10 @@ class Bilkom:
 
         url = "https://bilkom.pl/stacje/tablica"
 
+        if date.date() < datetime.now().date():
+            self.logger.error("Cannot check past timetables.")
+            return
+
         date_str, time_str = self.parse_date_format(date)
 
         params = {
