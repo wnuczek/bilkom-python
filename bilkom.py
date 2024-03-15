@@ -96,19 +96,19 @@ class Bilkom:
             self.parse_train_list_item(train)
 
     def parse_train_list_item(self, item):
-        train_no = item.find("div", class_="mobile-carrier").text
+        train_no = getattr(item.find("div", class_="mobile-carrier"), "text", None)
 
-        time_epoch = item.find("div", class_="date-time-hidden").text
-        time = datetime.fromtimestamp(int(time_epoch) / 1000)
+        time_epoch = getattr(item.find("div", class_="date-time-hidden"), "text", None)
+        time = datetime.fromtimestamp(int(time_epoch) / 1000) if time_epoch else None
 
         time_diff_elem = item.find(
             "div", class_="time", attrs={"data-difference": True}
         )
         time_diff = time_diff_elem["data-difference"] if time_diff_elem else None
 
-        direction = item.find("div", class_="direction").text
+        direction = getattr(item.find("div", class_="direction"), "text", None)
 
-        track = item.find("div", class_="track").text
+        track = getattr(item.find("div", class_="track"), "text", None)
 
         self.station_table.append(
             {
